@@ -1,7 +1,7 @@
 <?php
 	require_once(__DIR__ . "/../include/common.php");
 
-	$download_page = file_get_contents("https://www.endless-online.com/download.html") or die("[" . date("Y-m-d H:i:s") . "] ERROR: Failed to get download page!\n");
+	$download_page = file_get_contents("https://www.endless-online.com/downloads.html") or die("[" . date("Y-m-d H:i:s") . "] ERROR: Failed to get download page!\n");
 	
 	if (preg_match("/https:\/\/(www\.)?endless-online\.com\/client\/\S*\.zip/", $download_page, $matches))
 	{
